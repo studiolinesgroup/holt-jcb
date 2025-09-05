@@ -1,0 +1,51 @@
+<div li-block="Add to Cart">
+                    
+                  
+                    <div class="product-header_cta">
+                    <div class="product-card_information">
+                      {% if product.compare_at_price | money %}    <div li-if="product.compare_at_price > product.price" li-object="product.compare_at_price | money" class="product-card_comparison-price">
+    £00    </div>
+{% endif %}
+                      <div class="product-card_price">
+                        <div li-object="product.price | money" class="new-machine-grid_stat">{{ product.price | money }}</div>
+                        <div class="new-machine-grid_stat-title">excl. VAT</div>
+                      </div>
+                      <div class="product-card_price">
+                        <div li-object="product.price | times:1.2 | money" class="new-machine-grid_stat_vat">{{ product.price | times:1.2 | money }}</div>
+                        <div class="new-machine-grid_stat-title">Inc. VAT</div>
+                      </div>
+                    </div>
+                    <div class="product-header_form-block w-form">
+                      {% form 'product', product, class: 'product-header_default-state' %}
+<div class="product-header_add-to-cart-wrapper">
+                          {% if product.available == true %}    <div li-if="product.available == true" class="product-header_buy-wrappper">
+    <input class="form_input is-quantity w-input" maxlength="256" name="quantity-4" li-element="add-to-cart-quantity" data-name="Quantity 4" placeholder="1" type="number" id="quantity-4" required="" x-model="quantity">
+                            <a li-element="add-to-cart" href="#" class="button max-width-full w-button" @click="addToCart($event, true)" :disabled="!addToCartButton">Add to cart</a>
+                              </div>
+{% endif %}
+                          {% if product.available == false %}    <div li-if="product.available == false" class="product-header_out-of-stock">
+    
+                            <a href="#" class="button is-unavailable w-button">Not in Stock</a>
+                              </div>
+{% endif %}
+                        </div>
+                      {% endform %}
+                      <div class="hide w-form-done">
+                        <div>Thank you! Your submission has been received!</div>
+                      </div>
+                      <div class="hide w-form-fail">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                      </div>
+                    </div>
+                  </div>
+                    
+                
+                </div> {% schema %} {
+    "name": "Add to Cart",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Add to Cart"
+        }
+    ]
+} {% endschema %}

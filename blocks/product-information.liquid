@@ -1,0 +1,29 @@
+<div li-block="Product Information">
+                    
+                  
+                    <div class="product-header_product-info">
+                    <div class="product-header_stat-wrapper">
+                      <div class="product-header_stat-title">Availability</div>
+                      {% if product.available == true %}    <div li-if="product.available == true" class="product-header_stat-value">
+    In stock    </div>
+{% endif %}
+                      {% if product.available == false %}    <div li-if="product.available == false" class="product-header_stat-value">
+    Not in stock    </div>
+{% endif %}
+                    </div>
+                    <div class="product-header_stat-wrapper">
+                      <div class="product-header_stat-title">Manufacturer</div>
+                      <div li-object="product.vendor" class="product-header_stat-value">{{ product.vendor }}</div>
+                    </div>
+                  </div>
+                    
+                
+                </div> {% schema %} {
+    "name": "Product Information",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Product Information"
+        }
+    ]
+} {% endschema %}
