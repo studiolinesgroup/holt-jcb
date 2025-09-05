@@ -1,0 +1,54 @@
+<div class="page-header_component">
+          <div class="page-header_wrapper">
+            <div class="padding-global">
+              <div class="padding-vertical padding-huge">
+                <div class="w-layout-grid page-header_content">
+                  <div data-w-id="cd19df17-be47-d833-9c15-0a114b0020d8" class="page-header_content-left">
+                    <h1 class="text-color-white text-wrap">
+{{ section.settings.text_heading }}
+</h1>
+                    <div class="spacer-medium"></div>
+                    <div class="text-color-white text-wrap lead"> {{ section.settings.richtext_paragraph }} </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page-header_background-wrapper">
+              <div class="overlay-layer_page-header"></div>{% if section.settings.image_image %}
+{{ section.settings.image_image | image_url: width: 1000 | image_tag: class: 'image', sizes: '(max-width: 1200px) 100vw, 1200px', data-w-id: 'cd19df17-be47-d833-9c15-0a114b0020e4', loading: 'eager' }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'image' }} 
+{% endif %}
+            </div>
+          </div>
+        </div> {% schema %} {
+    "tag": "header",
+    "name": "Image with Text",
+    "class": "section_header-home",
+    "settings": [
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Short heading here"
+        },
+        {
+            "id": "richtext_paragraph",
+            "type": "richtext",
+            "label": "Paragraph",
+            "default": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>"
+        },
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Image with Text",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}

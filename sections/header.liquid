@@ -1,0 +1,804 @@
+<div data-animation="default" class="navbar_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" role="banner" data-duration="400" x-data="">
+          <div class="navbar_top"></div>
+          <div class="navbar_padding">
+            <div class="navbar_container">
+              <div>
+                <a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="navbar_logo-link w-nav-brand">{% if section.settings.image_logo %}
+{{ section.settings.image_logo | image_url: width: 1000 | image_tag: class: 'navbar_logo', width: '515', height: '128', sizes: '(max-width: 767px) 98vw, 515px', loading: 'lazy' }}
+{% else %}
+<img class="navbar_logo" src="{{ 'Holt-JCB-Logo-Parts-1.png' | asset_url }}" width="515" height="128" alt="" sizes="(max-width: 767px) 98vw, 515px" loading="lazy" srcset="{{ 'Holt-JCB-Logo-Parts-1-p-500.png' | asset_url }} 500w, {{ 'Holt-JCB-Logo-Parts-1-p-800.png' | asset_url }} 800w, {{ 'Holt-JCB-Logo-Parts-1-p-1080.png' | asset_url }} 1080w, {{ 'Holt-JCB-Logo-Parts-1-p-1600.png' | asset_url }} 1600w, {{ 'Holt-JCB-Logo-Parts-1-p-2000.png' | asset_url }} 2000w, {{ 'Holt-JCB-Logo-Parts-1.png' | asset_url }} 3092w">
+{% endif %}</a>
+              </div>
+              <div class="navbar_icons">
+                <nav role="navigation" class="navbar_menu is-page-height-tablet w-nav-menu">
+                  {% for link in linklists[section.settings.menu].links %}    <div data-delay="200" data-hover="false" li-for="link in linklists[section.settings.menu].links" data-w-id="158f99af-1d13-687a-3f0b-33d266f702a4" class="navbar_menu-dropdown w-dropdown">
+                                    
+                    
+                            <div class="navbar_dropdown-toggle w-dropdown-toggle">
+                      <a li-object:href="link.url" href="{{ link.url }}" class="nav-link w-inline-block">
+                        <div>
+                          <div li-object="link.title">{{ link.title }}</div>
+                        </div>
+                      </a>
+                      {% if link.links.size > 0 %}    <div li-if="link.links.size > 0" class="dropdown-chevron w-embed">
+    <svg width=" 100%" height=" 100%" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z" fill="currentColor"></path>
+                        </svg>    </div>
+{% endif %}
+                    </div>
+                            
+                    
+                            {% if link.links.size > 0  %}    <nav li-if="link.links.size > 0 " class="navbar_dropdown-list_shadow w-dropdown-list">
+    
+                      {% for child_link in link.links %}    <div li-for="child_link in link.links">
+                                    
+                        
+                            <a href="{{ child_link.url }}" li-object="child_link.title" li-object:href="child_link.url" class="navbar_dropdown-link w-dropdown-link">{{ child_link.title }}</a>
+                            
+                      
+                        </div>
+{% endfor %}
+                        </nav>
+{% endif %}
+                            
+                  
+                        </div>
+{% endfor %}
+                </nav>
+                <div class="nav_shop-icons">
+                  <div class="nav_search">
+                    <div data-hover="false" data-delay="0" class="nav_dropdown w-dropdown">
+                      <div class="nav_shop-icon w-dropdown-toggle">
+                        <div class="icon-embed-navbar w-embed"><svg width=" 100%" height=" 100%" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.7592 18.2059H19.4922L19.0432 17.7729C20.6693 15.887 21.563 13.4791 21.5611 10.9889C21.5611 8.92711 20.9497 6.91162 19.8042 5.1973C18.6588 3.48299 17.0307 2.14684 15.1258 1.35783C13.221 0.568817 11.1249 0.362376 9.10277 0.764611C7.0806 1.16685 5.22312 2.15969 3.76521 3.6176C2.30731 5.0755 1.31446 6.93299 0.912224 8.95516C0.509989 10.9773 0.716431 13.0734 1.50544 14.9782C2.29446 16.8831 3.6306 18.5112 5.34492 19.6566C7.05923 20.8021 9.07472 21.4135 11.1365 21.4135C13.7186 21.4135 16.0922 20.4673 17.9205 18.8956L18.3535 19.3446V20.6116L26.3725 28.6145L28.7621 26.2248L20.7592 18.2059ZM11.1365 18.2059C7.14309 18.2059 3.91949 14.9823 3.91949 10.9889C3.91949 6.99548 7.14309 3.77187 11.1365 3.77187C15.1299 3.77187 18.3535 6.99548 18.3535 10.9889C18.3535 14.9823 15.1299 18.2059 11.1365 18.2059Z" fill="currentColor"></path>
+                          </svg></div>
+                      </div>
+                      <nav class="nav_predictive-search-holder w-dropdown-list">
+                        <div li-element="dropdown-toggle" class="nav_predictive-search-close" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"></div>
+                        <div class="predictive-search_component">
+                          <div class="predictive-search_header">
+                            <div class="heading-style-h3">
+{{ section.settings.text_search }}
+</div><button li-element="dropdown-toggle" aria-label="Close Search" class="nav_dropdown-close-button" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))">
+                              <div class="nav_dropdown-close-icon w-embed"><svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M1.84775 14.178L0.447754 12.778L6.04775 7.17798L0.447754 1.57798L1.84775 0.177979L7.44775 5.77798L13.0478 0.177979L14.4478 1.57798L8.84775 7.17798L14.4478 12.778L13.0478 14.178L7.44775 8.57798L1.84775 14.178Z" fill="currentColor"></path>
+                                </svg></div>
+                            </button>
+                          </div><predictive-search>
+                            <div class="predictive-search_holder">
+                              <div class="predictive-search_form w-form">
+                                <form id="wf-form-produkt-suche" name="wf-form-produkt-suche" data-name="produkt-suche" action="/search" method="get" class="predictive-search_form-component" data-wf-page-id="68b5772c43dac8478414ff43" data-wf-element-id="ace72904-ccb0-6b8e-3d5e-d5f5ca33919d">
+                                  <div class="predictive-search_input-holder"><label for="search-input" class="form_hidden-label">Search</label><input type="search" id="search-input" placeholder="Search now" name="q" class="predictive-search_input">
+                                    <a href="#" class="predictive-search_search-button w-inline-block">
+                                      <div class="icon-embed-xsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 25 25" fill="none" preserveaspectratio="xMidYMid meet" aria-hidden="true" role="img">
+                                          <mask id="mask0_2941_121300" style="mask-type:alpha" maskunits="userSpaceOnUse" x="0" y="0" width="25" height="25">
+                                            <rect x="0.123535" y="0.987549" width="24" height="24" fill="#D9D9D9"></rect>
+                                          </mask>
+                                          <g mask="url(#mask0_2941_121300)">
+                                            <path d="M19.7235 21.9875L13.4235 15.6875C12.9235 16.0875 12.3485 16.4042 11.6985 16.6375C11.0485 16.8709 10.3569 16.9875 9.62354 16.9875C7.80687 16.9875 6.26937 16.3584 5.01104 15.1C3.7527 13.8417 3.12354 12.3042 3.12354 10.4875C3.12354 8.67088 3.7527 7.13338 5.01104 5.87505C6.26937 4.61672 7.80687 3.98755 9.62354 3.98755C11.4402 3.98755 12.9777 4.61672 14.236 5.87505C15.4944 7.13338 16.1235 8.67088 16.1235 10.4875C16.1235 11.2209 16.0069 11.9125 15.7735 12.5625C15.5402 13.2125 15.2235 13.7875 14.8235 14.2875L21.1235 20.5875L19.7235 21.9875ZM9.62354 14.9875C10.8735 14.9875 11.936 14.55 12.811 13.675C13.686 12.8 14.1235 11.7375 14.1235 10.4875C14.1235 9.23755 13.686 8.17505 12.811 7.30005C11.936 6.42505 10.8735 5.98755 9.62354 5.98755C8.37354 5.98755 7.31104 6.42505 6.43604 7.30005C5.56104 8.17505 5.12354 9.23755 5.12354 10.4875C5.12354 11.7375 5.56104 12.8 6.43604 13.675C7.31104 14.55 8.37354 14.9875 9.62354 14.9875Z" fill="currentColor"></path>
+                                          </g>
+                                        </svg></div>
+                                    </a><input type="submit" data-wait="Please wait..." id="submit-search" class="hide w-button" value="Submit">
+                                  </div>
+                                  <div id="predictive-search" class="predictive-search_overflow no-scrollbar">
+                                    <div li-section="predictive_search" class="predictive-search_section">
+                                      {% if predictive_search.performed %}    <div li-if="predictive_search.performed" class="predictive-search_conditional">
+    
+                                        {% assign first_column_results_size = predictive_search.resources.queries.size | plus: predictive_search.resources.collections.size | plus: predictive_search.resources.pages.size | plus: predictive_search.resources.articles.size | plus: predictive_search.resources.products.size %}
+                                        {% if first_column_results_size > 0 %}    <div li-if="first_column_results_size > 0" class="predictive-search_conditional">
+    
+                                          {% if predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0 %}    <div li-if="predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0" class="predictive-search_topic">
+    
+                                            <div class="predictive-search_headline">
+                                              <div class="text-style-muted">Suggestions</div>
+                                            </div>
+                                            <ul role="list" class="predictive-search_list w-list-unstyled">
+                                              {% for query in predictive_search.resources.queries %}    <li li-for="query in predictive_search.resources.queries" class="predictive-search_item">
+                                    
+                                                
+                            <a li-object:href="query.url" href="{{ query.url }}" class="predictive-search_link w-inline-block">
+                                                  <div li-object="query.styled_text">{{ query.styled_text }}</div>
+                                                </a>
+                            
+                                              
+                        </li>
+{% endfor %}
+                                              {% for collection in predictive_search.resources.collections %}    <li li-for="collection in predictive_search.resources.collections" class="predictive-search_item">
+                                    
+                                                
+                            <a li-object:href="collection.url" href="{{ collection.url }}" class="predictive-search_link w-inline-block">
+                                                  <div li-object="collection.title">{{ collection.title }}</div>
+                                                </a>
+                            
+                                              
+                        </li>
+{% endfor %}
+                                            </ul>
+                                              </div>
+{% endif %}
+                                          {% if predictive_search.resources.products.size > 0 or predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0 %}    <div li-if="predictive_search.resources.products.size > 0 or predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0" class="predictive-search_topic">
+    
+                                            <div class="predictive-search_headline">
+                                              <div class="text-style-muted">Products</div>
+                                            </div>
+                                            <ul role="list" class="predictive-search_product-list w-list-unstyled">
+                                              {% for product in predictive_search.resources.products %}    <li li-for="product in predictive_search.resources.products" class="predictive-search_produt-item">
+                                    
+                                                
+                            <a li-object:href="product.url" href="{{ product.url }}" class="predictive-search_line-item w-inline-block">
+                                                  <div class="predictive-search_image-wrapper"><img li-object:src="product.featured_media | image_url: width: 150" li-object:alt="product.featured_image.alt" alt="{{ product.featured_image.alt }}" src="{{ product.featured_media | image_url: width: 150 }}" loading="lazy" class="predictive-search_image"></div>
+                                                  <div class="predictive-search_product-info">
+                                                    <div class="text-size-regular text-weight-bold"><span li-object="product.title">{{ product.title }}</span></div>
+                                                    <div class="text-size-small"><span li-object="product.price | money">{{ product.price | money }}</span></div>
+                                                  </div>
+                                                </a>
+                            
+                                              
+                        </li>
+{% endfor %}
+                                            </ul>
+                                              </div>
+{% endif %}
+                                          {% if predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0 %}    <div li-if="predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0" class="predictive-search_topic">
+    
+                                            <div class="predictive-search_headline">
+                                              <div class="text-style-muted">Pages</div>
+                                            </div>
+                                            <ul role="list" class="predictive-search_list w-list-unstyled">
+                                              {% for page in predictive_search.resources.pages %}    <li li-for="page in predictive_search.resources.pages" class="predictive-search_item">
+                                    
+                                                
+                            <a li-object:href="page.url" href="{{ page.url }}" class="predictive-search_link w-inline-block">
+                                                  <div li-object="page.title">{{ page.title }}</div>
+                                                </a>
+                            
+                                              
+                        </li>
+{% endfor %}
+                                            </ul>
+                                              </div>
+{% endif %}
+                                            </div>
+{% endif %}
+                                        {% if first_column_results_size == 0 %}    <div li-if="first_column_results_size == 0" class="predictive-search_conditional">
+    
+                                          <div class="predictive-search_topic">
+                                            <div class="text-style-muted">Nothing found in "<span li-object="predictive_search.terms">{{ predictive_search.terms }}</span>"</div>
+                                          </div>
+                                            </div>
+{% endif %}
+                                          </div>
+{% endif %}
+                                      {% unless predictive_search.performed %}    <div li-unless="predictive_search.performed" class="predictive-search_conditional">
+    
+                                        <div class="predictive-search_overflow">
+                                          <div class="predictive-search_topic">
+                                            <div class="predictive-search_headline">
+                                              <div class="text-style-muted">Suggestions</div>
+                                            </div>
+                                            <ul role="list" class="predictive-search_list w-list-unstyled">
+                                              {% for block in section.blocks %}
+    {% if block.type == "search-suggestion" %}
+                    <li li-block="Search - Suggestion" class="predictive-search_item">
+                                    
+                                                
+                                    <a href="{{ block.settings.url_link }}" class="predictive-search_link w-inline-block"> <div>{{ block.settings.text_text }}</div> </a>
+                                    
+                                              
+                            </li>
+            {% endif %}
+{% endfor %}
+                                            </ul>
+                                          </div>
+                                          <div class="predictive-search_topic">
+                                            <div class="predictive-search_headline">
+                                              <div class="text-style-muted">Bestseller</div>
+                                            </div>
+                                            <ul role="list" class="predictive-search_product-list w-list-unstyled">
+                                              {% for product in section.settings.collection_search_bestseller.products limit: section.settings.collection_search_bestseller_limit %}
+<li class="predictive-search_produt-item">
+    
+                                                
+    <a li-object:href="product.url" href="{{ product.url }}" class="predictive-search_line-item w-inline-block">
+                                                  <div class="predictive-search_image-wrapper"><img li-object:src="product.featured_image | img_url: 'master'" li-object:alt="product.featured_image.alt" alt="{{ product.featured_image.alt }}" src="{{ product.featured_image | img_url: 'master' }}" loading="lazy" class="predictive-search_image"></div>
+                                                  <div class="predictive-search_product-info">
+                                                    <div class="text-size-regular text-weight-bold"><span li-object="product.title">{{ product.title }}</span></div>
+                                                    <div class="text-size-small"><span li-object="product.price | money">{{ product.price | money }}</span></div>
+                                                  </div>
+                                                </a>
+    
+                                              
+</li>
+{% endfor %}
+                                            </ul>
+                                          </div>
+                                        </div>
+                                          </div>
+{% endunless %}
+                                    </div>
+                                  </div>
+                                </form>
+                                <div class="hide w-form-done">
+                                  <div>Thank you! Your submission has been received!</div>
+                                </div>
+                                <div class="hide w-form-fail">
+                                  <div>Oops! Something went wrong while submitting the form.</div>
+                                </div>
+                              </div>
+                            </div>
+                          </predictive-search>
+                        </div>
+                      </nav>
+                    </div>
+                  </div>
+                  {% if shop.customer_accounts_optional %}    <div li-if="shop.customer_accounts_optional" class="nav_account">
+    
+                    <a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="nav_shop-icon w-inline-block">
+                      <div class="icon-embed-navbar w-embed"><svg width=" 100%" height=" 100%" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.449 3.89526C14.9325 3.89526 15.4113 3.99049 15.8579 4.1755C16.3046 4.36052 16.7104 4.6317 17.0523 4.97357C17.3942 5.31544 17.6654 5.72129 17.8504 6.16796C18.0354 6.61463 18.1306 7.09337 18.1306 7.57685C18.1306 8.06032 18.0354 8.53906 17.8504 8.98573C17.6654 9.4324 17.3942 9.83825 17.0523 10.1801C16.7104 10.522 16.3046 10.7932 15.8579 10.9782C15.4113 11.1632 14.9325 11.2584 14.449 11.2584C13.4726 11.2584 12.5362 10.8706 11.8458 10.1801C11.1553 9.48969 10.7675 8.55326 10.7675 7.57685C10.7675 6.60043 11.1553 5.664 11.8458 4.97357C12.5362 4.28314 13.4726 3.89526 14.449 3.89526ZM14.449 19.6735C19.6559 19.6735 25.1432 22.2331 25.1432 23.3551V25.2835H3.75491V23.3551C3.75491 22.2331 9.24223 19.6735 14.449 19.6735ZM14.449 0.564301C10.5746 0.564301 7.43649 3.70241 7.43649 7.57685C7.43649 11.4513 10.5746 14.5894 14.449 14.5894C18.3235 14.5894 21.4616 11.4513 21.4616 7.57685C21.4616 3.70241 18.3235 0.564301 14.449 0.564301ZM14.449 16.3425C9.76817 16.3425 0.42395 18.6917 0.42395 23.3551V26.8613C0.42395 27.8256 1.21286 28.6145 2.17709 28.6145H26.721C27.6852 28.6145 28.4741 27.8256 28.4741 26.8613V23.3551C28.4741 18.6917 19.1299 16.3425 14.449 16.3425Z" fill="currentColor"></path>
+                        </svg></div>
+                    </a>
+                      </div>
+{% endif %}
+                  <div class="nav_mini-cart">
+                    <script>
+    document.addEventListener('alpine:init', () => {
+
+    Alpine.data('handleMinicart', () => ({
+        init() {
+            console.log('handleMinicart init')
+        },
+        cart: {
+            note: null,
+            attributes: {},
+            items: [],
+            currency: window.Shopify.currency.active,
+            cart_level_discount_applications: [],
+            response: {
+                result : {},
+                show : false,
+                timeout : 5000,
+            },
+            item_count: 0,
+            total_price:0,
+            total_weight: 0,
+            total_discount: 0,
+            original_total_price: 0,
+            items_subtotal_price: 0
+        },
+        _abortController : null,
+        initAbortController() {
+            if(this._abortController) {
+                this._abortController.abort('abort previous request');
+            }
+            this._abortController = new AbortController()
+        },
+        getAbortControllerSignal() {
+            return this._abortController.signal
+        },
+        resetAbortController() {
+            this._abortController = null;
+        },
+        toggleMiniCart() {
+            console.log('(minicart.js) toggleMiniCart called');
+
+            LiquifyHelper.handleTriggerClick();
+
+            this.getCart();
+        },
+
+        /**
+         * Get the cart data.
+         */
+        async getCart() {
+            this.initAbortController()
+            await fetch(window.Shopify.routes.root + 'cart.js', {
+                method: 'GET',
+                signal: this.getAbortControllerSignal(),
+                headers: {'Content-Type': 'application/json'},
+            })
+                .then(response => response.json())
+                .then(data => {
+                    this.resetAbortController();
+
+                    this.cart.item_count = data.item_count;
+
+                    this.cart.items = data.items.map((item) => {
+                        item.title = this.htmlspecialchars_decode(item.title)
+                        return item
+                    })
+
+
+                    this.cart.total_price = data.total_price;
+                    this.cart.total_weight = data.total_weight;
+                    this.cart.total_discount = data.total_discount;
+
+                    this.$dispatch('carttotalitems', data.item_count);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        },
+
+        /**
+         * @param key
+         * @param quantity
+         */
+        increaseCartItemQuantity(key, quantity) {
+            this.updateCartItemQuantity(key, parseInt(quantity) + 1);
+        },
+
+        /**
+         * @param key
+         * @param quantity
+         */
+        decreaseCartItemQuantity(key, quantity) {
+            this.updateCartItemQuantity(key, parseInt(quantity) - 1);
+        },
+
+        /**
+         * Update the cart item.
+         *
+         * @param key
+         * @param quantity
+         */
+        updateCartItemQuantity(key, quantity) {
+            this.initAbortController();
+            console.log('updateCartItemQuantity(): key, quantity: ', key, quantity);
+            this.cart.items.filter((product)  => {
+                if(product.key === key) {
+                    product.quantity = quantity
+                }
+            })
+            let updates = {};
+            updates[key] = quantity;
+            fetch(window.Shopify.routes.root + 'cart/update.js', {
+                method: 'POST',
+                signal: this.getAbortControllerSignal(),
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ updates }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    this.resetAbortController();
+                    console.log('updateCartItemQuantity(): ', data);
+
+                    this.$dispatch('cartupdated');
+                    this.$dispatch('showcartmessage', { status: data.status, message: data.message, description: data.description });
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    this.$dispatch('showcartmessage', { status: error?.status, message: error, description: error });
+                });
+        },
+
+        /**
+         * Format monetary values.
+         */
+        moneyFormat(value, minor = true) {
+            return LiquifyHelper.moneyFormat(value, minor)
+        },
+
+        htmlspecialchars_decode(string) {
+            return LiquifyHelper.htmlspecialchars_decode(string)
+        },
+
+        /**
+         * Shows the minicart api message
+         * @param event
+         */
+        showCartMessage(event) {
+            //console.log("dispatched showCartMessage", event)
+            if(event?.detail?.status) {
+                this.cart.response.result = event.detail ?? {}
+                this.cart.response.show = true
+                setTimeout(() => {
+                    this.cart.response.result = {};
+                    this.cart.response.show = false
+                }, this.cart.response.timeout ?? 5000)
+            }
+        },
+
+        async returnCartItems() {
+            await this.getCart();
+
+            this.$dispatch('currentcartitems', this.cart.items);
+        },
+
+        /**
+         * @deprecated
+         */
+        set open(open) { // deprecated use  LiquifyHelper instead
+            //console.warn('Deprecated "set open" in mini_cart')
+        },
+        /**
+         * @deprecated
+         */
+        get open() { // deprecated use  LiquifyHelper instead
+            //console.warn('Deprecated "get open" in mini_cart')
+            return false;
+        },
+        /**
+         * @deprecated
+         */
+        set note(note) { // deprecated
+            //console.warn('Deprecated "set note" in mini_cart')
+            this.cart.note = note;
+        },
+        /**
+         * @deprecated
+         */
+        get note() { // deprecated
+            //console.warn('Deprecated "get note" in mini_cart')
+            return this.cart.note;
+        },
+        /**
+         * @deprecated
+         */
+        set attributes(attributes) { // deprecated
+            //console.warn('Deprecated "set attributes" in mini_cart')
+            this.cart.attributes = attributes;
+        },
+        /**
+         * @deprecated
+         */
+        get attributes() { // deprecated
+            //console.warn('Deprecated "get attributes" in mini_cart')
+            return this.cart.attributes;
+        },
+        /**
+         * @deprecated
+         */
+        set original_total_price(original_total_price) { //deprecated
+            //console.warn('Deprecated "set original_total_price" in mini_cart')
+            this.cart.original_total_price = original_total_price;
+        },
+        /**
+         * @deprecated
+         */
+        get original_total_price() { //deprecated
+            //console.warn('Deprecated "get original_total_price" in mini_cart')
+            return this.cart.original_total_price;
+        },
+        /**
+         * @deprecated
+         */
+        set total_price(total_price) { //deprecated
+            //console.warn('Deprecated "set total_price" in mini_cart')
+            this.cart.total_price = total_price;
+        },
+        /**
+         * @deprecated
+         */
+        get total_price() { //deprecated
+            //console.warn('Deprecated "get total_price" in mini_cart')
+            return this.cart.total_price;
+        },
+        /**
+         * @deprecated
+         */
+        set total_discount(total_discount) { //deprecated
+            //console.warn('Deprecated "set total_discount" in mini_cart')
+            this.cart.total_discount = total_discount;
+        },
+        /**
+         * @deprecated
+         */
+        get total_discount() { //deprecated
+            //console.warn('Deprecated "get total_discount" in mini_cart')
+            return this.cart.total_discount;
+        },
+        /**
+         * @deprecated
+         */
+        set total_weight(total_weight) { //deprecated
+            //console.warn('Deprecated "set total_weight" in mini_cart')
+            this.cart.total_discount = total_weight;
+        },
+        /**
+         * @deprecated
+         */
+        get total_weight() { //deprecated
+            //console.warn('Deprecated "get total_weight" in mini_cart')
+            return this.cart.total_weight;
+        },
+        /**
+         * @deprecated
+         */
+        set item_count(item_count) { //deprecated
+            //console.warn('Deprecated "set item_count" in mini_cart')
+            this.cart.total_discount = item_count;
+        },
+        /**
+         * @deprecated
+         */
+        get item_count() { //deprecated
+            //console.warn('Deprecated "get item_count" in mini_cart')
+            return this.cart.item_count;
+        },
+        /**
+         * @deprecated
+         */
+        set items_subtotal_price(items_subtotal_price) { //deprecated
+            //console.warn('Deprecated "set items_subtotal_price" in mini_cart')
+            this.cart.items_subtotal_price = items_subtotal_price;
+        },
+        /**
+         * @deprecated
+         */
+        get items_subtotal_price() { //deprecated
+            //console.warn('Deprecated "get items_subtotal_price" in mini_cart')
+            return this.cart.items_subtotal_price;
+        },
+        /**
+         * @deprecated
+         */
+        set products(products) {
+            //console.warn('Deprecated "set products" in mini_cart')
+            this.cart.items = products;
+        },
+        /**
+         * @deprecated
+         */
+        get products() {
+            //console.warn('Deprecated "get products" in mini_cart')
+            return this.cart.items;
+        },
+        /**
+         * @deprecated
+         */
+        set requires_shipping(requires_shipping) {
+            //console.warn('Deprecated "set requires_shipping" in mini_cart')
+        },
+        /**
+         * @deprecated
+         */
+        get requires_shipping() {
+            //console.warn('Deprecated "get requires_shipping" in mini_cart')
+            return false;
+        },
+        /**
+         * @deprecated
+         */
+        set currency(currency) { //deprecated
+            //console.warn('Deprecated "set currency" in mini_cart')
+            this.cart.currency = currency;
+        },
+        /**
+         * @deprecated
+         */
+        get currency() { //deprecated
+            //console.warn('Deprecated "get currency" in mini_cart')
+            return this.cart.currency;
+        },
+        /**
+         * @deprecated
+         */
+        set cart_level_discount_applications(cart_level_discount_applications) { //deprecated
+            //console.warn('Deprecated "set cart_level_discount_applications" in mini_cart')
+            this.cart.cart_level_discount_applications = cart_level_discount_applications;
+        },
+        /**
+         * @deprecated
+         */
+        get cart_level_discount_applications() { //deprecated
+            //console.warn('Deprecated "get cart_level_discount_applications" in mini_cart')
+            return this.cart.cart_level_discount_applications;
+        },
+        /**
+         * @deprecated
+         */
+        set cartApiResponse(cartApiResponse) { //deprecated
+            //console.warn('Deprecated "set cartApiResponse" in mini_cart')
+            this.cart.cartApiResponse = cartApiResponse;
+        },
+        /**
+         * @deprecated
+         */
+        get cartApiResponse() { //deprecated
+            //console.warn('Deprecated "get cartApiResponse" in mini_cart')
+            return this.cart.response;
+        },
+        /**
+         * @deprecated
+         */
+        set total(total) { //deprecated
+            //console.warn('Deprecated "set total" in mini_cart')
+            this.cart.item_count = total.items;
+            this.cart.total_price = total.price;
+            this.cart.total_weight = total.weight;
+            this.cart.total_discount = total.discount;
+        },
+        /**
+         * @deprecated
+         */
+        get total() { //deprecated
+            //console.warn('Deprecated "get total" in mini_cart')
+            return {
+                items: this.cart.item_count,
+                price: this.cart.total_price,
+                weight: this.cart.total_weight,
+                discount: this.cart.total_discount,
+            };
+        }
+    }))
+
+
+});
+
+</script>
+<div data-hover="false" data-delay="0" li-element="mini-cart" class="nav_dropdown w-dropdown" x-data="handleMinicart()" x-init="getCart()" @cartupdated.window="getCart()" @setcartitem.window="updateCartItemQuantity($event.detail.product, $event.detail.quantity)" @increasecartitem.window="increaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @decreasecartitem.window="decreaseCartItemQuantity($event.detail.product, $event.detail.quantity)" @toggleminicart.window="toggleMiniCart()" @showcartmessage.window="showCartMessage" @getcartitems.window="returnCartItems">
+                      <div li-element="mini-cart-toggle" class="nav_shop-icon w-dropdown-toggle" @click="$dispatch('cartupdated.window')">
+                        <div class="icon-embed-navbar w-embed"><svg width=" 100%" height=" 100%" viewbox="0 0 29 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.68964 27.4978C1.68964 28.3244 2.018 29.1171 2.60249 29.7016C3.18698 30.2861 3.97973 30.6145 4.80632 30.6145C5.63292 30.6145 6.42566 30.2861 7.01015 29.7016C7.59464 29.1171 7.92301 28.3244 7.92301 27.4978C7.92301 26.6712 7.59464 25.8785 7.01015 25.294C6.42566 24.7095 5.63292 24.3811 4.80632 24.3811C3.97973 24.3811 3.18698 24.7095 2.60249 25.294C2.018 25.8785 1.68964 26.6712 1.68964 27.4978ZM18.8314 27.4978C18.8314 28.3244 19.1598 29.1171 19.7443 29.7016C20.3288 30.2861 21.1215 30.6145 21.9481 30.6145C22.7747 30.6145 23.5674 30.2861 24.1519 29.7016C24.7364 29.1171 25.0648 28.3244 25.0648 27.4978C25.0648 26.6712 24.7364 25.8785 24.1519 25.294C23.5674 24.7095 22.7747 24.3811 21.9481 24.3811C21.1215 24.3811 20.3288 24.7095 19.7443 25.294C19.1598 25.8785 18.8314 26.6712 18.8314 27.4978Z" stroke="currentColor" stroke-width="3.16" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M21.948 24.3811H4.80626V2.5643H1.68958" stroke="currentColor" stroke-width="3.16" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4.80621 5.681L26.623 7.23934L25.0647 18.1477H4.80621" stroke="currentColor" stroke-width="3.16" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg></div>
+                        <div li-element="mini-cart-item-count" class="nav_shop-quantity" x-data="{ items: 0 }" x-text="items" @carttotalitems.window="items = event.detail">1</div>
+                      </div>
+                      <nav li-element="mini-cart-container" class="nav_mini-cart-holder w-dropdown-list" :class="open || 'mini-cart-closed'">
+                        <div li-element="dropdown-toggle" class="nav_mini-cart-close" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))"></div>
+                        <div class="mini-cart_component">
+                          <div li-element="mini-cart-full" class="mini-cart_full" :style="total.items < 1 && { display: 'none' }">
+                            <div class="mini-cart_header">
+                              <div class="heading-style-h3">Cart</div><button li-element="dropdown-toggle" aria-label="Close Cart" class="nav_dropdown-close-button" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))">
+                                <div class="nav_dropdown-close-icon w-embed"><svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.84775 14.178L0.447754 12.778L6.04775 7.17798L0.447754 1.57798L1.84775 0.177979L7.44775 5.77798L13.0478 0.177979L14.4478 1.57798L8.84775 7.17798L14.4478 12.778L13.0478 14.178L7.44775 8.57798L1.84775 14.178Z" fill="currentColor"></path>
+                                  </svg></div>
+                              </button>
+                            </div>
+                            <div class="mini-cart_line-item no-scrollbar">
+                              <ul role="list" class="mini-cart_line-item_list w-list-unstyled">
+                                <template x-for="product in products" :key="product.key">
+    <li li-element="mini-cart-item" class="mini-cart_line-item_item"><img src="../images/product-apparel-2.svg" loading="lazy" alt="" class="mini-cart_line-item_img" x-bind:src="product.image">
+                                  <div class="mini-cart_line-item_product-info">
+                                    <div li-js-object="product.title" class="text-size-regular text-weight-bold" x-text="product.title">Product Title</div>
+                                    <div class="mini-cart_line-item_price">
+                                      <div li-js-price="product.price" class="text-size-small" x-text="LiquifyHelper.moneyFormat(product.price, true, '{{ shop.money_with_currency_format }}')">14,99 $</div>
+                                      <template x-if="product.price < product.original_price">
+            <div li-js-if="product.price < product.original_price">
+        
+                                        <div li-js-price="product.original_price" class="text-size-small text-style-strikethrough text-style-muted" x-text="LiquifyHelper.moneyFormat(product.original_price, true, '{{ shop.money_with_currency_format }}')">14,99 $</div>
+                                              </div>
+    </template>
+                                    </div>
+                                    <div class="mini-cart_line-item_quantity">
+                                      <a li-element="mini-cart-item-decrease" href="#" class="mini-cart_line-item_quantity-adjust" :productprop="product" @click="$dispatch('decreasecartitem', { product: product.key, quantity: product.quantity, action: 'decrease' })">-</a><input li-element="mini-cart-item-quantity" class="mini-cart_line-item_quantity-adjust" value="1" :productprop="product" @input="$dispatch('setcartitem', { product: product.key, quantity: product.quantity })" x-model="product.quantity">
+                                      <a li-element="mini-cart-item-increase" href="#" class="mini-cart_line-item_quantity-adjust" :productprop="product" @click="$dispatch('increasecartitem', { product: product.key, quantity: product.quantity, action: 'increase' })">+</a>
+                                    </div>
+                                    <div li-element="mini-cart-item-remove" class="text-size-tiny text-color-grey text-style-link" :productprop="product" @click="$dispatch('setcartitem', { product: product.key, quantity: 0 })">Remove</div>
+                                  </div>
+                                </li></template>
+                              </ul>
+                            </div>
+                            <div class="mini-cart_footer">
+                              <div class="mini-cart_footer-total">
+                                <div class="text-size-regular text-weight-bold">Subtotal</div>
+                                <div class="mini-cart_footer-price">
+                                  <div li-js-price="total.price" class="text-size-regular text-weight-bold" x-text="LiquifyHelper.moneyFormat(total.price, true, '{{ shop.money_with_currency_format }}')">14,99 $</div>
+                                  <template x-if="total.price < original_total_price">
+            <div li-js-if="total.price < original_total_price" class="mini-cart_conditional">
+        
+                                    <div li-js-price="original_total_price" class="text-size-regular text-weight-bold text-style-strikethrough text-style-muted" x-text="LiquifyHelper.moneyFormat(original_total_price, true, '{{ shop.money_with_currency_format }}')">14,99 $</div>
+                                          </div>
+    </template>
+                                </div>
+                              </div>
+                              <div li-element="mini-cart-api-response" class="mini-cart_footer-message hide">
+                                <div class="mini-cart_footer-message-item">
+                                  <div class="text-size-regular text-weight-bold">Message</div>
+                                  <div li-js-object="cartApiResponse?.result?.message" class="text-size-regular text-weight-bold" x-text="cartApiResponse?.result?.message">14,99 $</div>
+                                </div>
+                              </div>
+                              <a x-bind:href="'/checkout'" href="#" class="button w-button">Checkout</a>
+                              <a li-object:href="routes.cart_url" href="{{ routes.cart_url }}" class="button is-secondary w-button">Cart</a>
+                            </div>
+                          </div>
+                          <div li-cloak="hide" li-element="mini-cart-empty" class="mini-cart_empty" :style="total.items && { display: 'none' }">
+                            <div class="mini-cart_header">
+                              <div class="heading-style-h3">Cart</div><button li-element="dropdown-toggle" aria-label="Close Cart" class="nav_dropdown-close-button" data-dropdowntoggle="" @click="LiquifyHelper.triggerClick($event.target.closest('.w-dropdown').querySelector('.w-dropdown-toggle.w--open'))">
+                                <div class="nav_dropdown-close-icon w-embed"><svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.84775 14.178L0.447754 12.778L6.04775 7.17798L0.447754 1.57798L1.84775 0.177979L7.44775 5.77798L13.0478 0.177979L14.4478 1.57798L8.84775 7.17798L14.4478 12.778L13.0478 14.178L7.44775 8.57798L1.84775 14.178Z" fill="currentColor"></path>
+                                  </svg></div>
+                              </button>
+                            </div>
+                            <div class="mini-cart_empty-content">
+                              <div class="text-size-regular">No Products selected</div>
+                            </div>
+                          </div>
+                        </div>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <div class="navbar_burger-nav">
+                  <div class="navbar_menu-button w-nav-button">
+                    <div class="menu-icon">
+                      <div class="menu-icon_line-top"></div>
+                      <div class="menu-icon_line-middle">
+                        <div class="menu-icon_line-middle-inner"></div>
+                      </div>
+                      <div class="menu-icon_line-bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> {% schema %} {
+    "tag": "div",
+    "name": "Header",
+    "class": "section_navbar",
+    "blocks": [
+        {
+            "name": "Search - Suggestion",
+            "type": "search-suggestion",
+            "settings": [
+                {
+                    "id": "url_link",
+                    "type": "url",
+                    "label": "Link"
+                },
+                {
+                    "id": "text_text",
+                    "type": "text",
+                    "label": "Text",
+                    "default": "Tag"
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "id": "image_logo",
+            "type": "image_picker",
+            "label": "Logo"
+        },
+        {
+            "id": "text_search",
+            "type": "text",
+            "label": "Search",
+            "default": "Search"
+        },
+        {
+            "id": "collection_search_bestseller",
+            "type": "collection",
+            "label": "Search - Bestseller"
+        },
+        {
+            "type": "range",
+            "id": "collection_search_bestseller_limit",
+            "min": 1,
+            "max": 99,
+            "step": 1,
+            "label": "Limit: Search - Bestseller",
+            "default": 6
+        },
+        {
+            "type": "header",
+            "content": "Navigation"
+        },
+        {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Menu",
+            "default": "main-menu"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Header",
+            "category": "Liquify",
+            "blocks": [
+                {
+                    "type": "search-suggestion"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "groups": [
+            "*"
+        ]
+    }
+} {% endschema %}

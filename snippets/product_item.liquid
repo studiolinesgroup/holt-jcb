@@ -1,0 +1,30 @@
+<div class="product-card_item shadow-large">
+                    <div class="product-card_image-wrapper"><img li-object:src="product.featured_image | image_url: width: 450" li-object:alt="product.featured_image.alt" alt="{{ product.featured_image.alt }}" src="{{ product.featured_image | image_url: width: 450 }}" loading="lazy" class="product-card_image"></div>
+                    <div class="product-card_item-content">
+                      <div class="product-card_item-content-top">
+                        <div class="product-card_title-wrapper">
+                          <h3 li-object="product.title" class="heading-style-h4">{{ product.title }}</h3>
+                        </div>
+                      </div>
+                      <div class="product-card_information">
+                        {% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price">
+    
+                          <div li-object="product.compare_at_price | money" class="product-card_comparison-price">{{ product.compare_at_price | money }}</div>
+                            </div>
+{% endif %}
+                        <div class="product-card_price">
+                          <div li-object="product.price | money" class="new-machine-grid_stat">{{ product.price | money }}</div>
+                          <div class="new-machine-grid_stat-title">excl. VAT</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="new-machine-grid_button-wrapper">
+                      {% if product.available != true %}    <a li-if="product.available != true" href="#" class="button is-unavailable w-button">
+    Not in Stock    </a>
+{% endif %}
+                      {% if add-to-cart %}    <a href="#" li-if="product.available == true" li-element="add-to-cart" class="button fill w-button">
+    Add to cart    </a>
+{% endif %}
+                      <a href="{{ product.url }}" li-object:href="product.url" class="button is-alternate fill w-button">Read more</a>
+                    </div>
+                  </div>

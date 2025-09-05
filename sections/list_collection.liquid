@@ -1,0 +1,33 @@
+<div class="padding-global">
+          <div class="collections_list-wrapper w-dyn-list">
+            <div role="list" class="category_grid w-dyn-items">
+              {% for collection in collections %}    <div li-for="collection in collections" role="listitem" class="collections_list-item w-dyn-item">
+                                    
+                
+                            <a href="{{ collection.url }}" li-object:href="collection.url" class="home-collection_item w-inline-block">
+                  <div class="attachment-image_wrapper"><img li-object:src="collection.featured_image | image_url: width: 450" loading="lazy" alt="" src="{{ collection.featured_image | image_url: width: 450 }}" class="attachment_image"></div>
+                  <div class="category_text-wrapper">
+                    <div class="category_text"><span li-object="collection.title" class="category_text-name">{{ collection.title }}</span><span class="category_arrow">a </span></div>
+                  </div>
+                </a>
+                            
+              
+                        </div>
+{% endfor %}
+            </div>
+            <div class="hide w-dyn-empty">
+              <div>No items found.</div>
+            </div>
+          </div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "List-Collection",
+    "class": "section_collections",
+    "presets": [
+        {
+            "name": "List-Collection",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
