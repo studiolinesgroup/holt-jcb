@@ -3,8 +3,10 @@
                   
                     <div class="product-header_cta">
                     <div class="product-card_information">
-                      {% if product.compare_at_price | money %}    <div li-if="product.compare_at_price > product.price" li-object="product.compare_at_price | money" class="product-card_comparison-price">
-    £00    </div>
+                      {% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price">
+    
+                        <div li-object="product.compare_at_price | money" class="product-card_comparison-price">{{ product.compare_at_price | money }}</div>
+                          </div>
 {% endif %}
                       <div class="product-card_price">
                         <div li-object="product.price | money" class="new-machine-grid_stat">{{ product.price | money }}</div>
