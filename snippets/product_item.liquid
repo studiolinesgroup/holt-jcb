@@ -22,8 +22,10 @@
                       {% if product.available != true %}    <a li-if="product.available != true" href="#" class="button is-unavailable w-button">
     Not in Stock    </a>
 {% endif %}
-                      {% if add-to-cart %}    <a href="#" li-if="product.available == true" li-element="add-to-cart" class="button fill w-button">
-    Add to cart    </a>
+                      {% if product.available == true %}    <div li-if="product.available == true">
+    
+                        <a href="#" li-element="add-to-cart" class="button fill w-button" @click="addToCart($event, true)" :disabled="!addToCartButton">Add to cart</a>
+                          </div>
 {% endif %}
                       <a href="{{ product.url }}" li-object:href="product.url" class="button is-alternate fill w-button">Read more</a>
                     </div>
