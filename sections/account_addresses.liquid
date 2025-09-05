@@ -39,22 +39,18 @@
                             <div id="w-node-c1cc0feb-3fc0-f42f-4d44-745bb7051efa-b7051ee4" class="form_field-wrapper">
                               <div class="form_field-label">Address 2</div><input class="form_input w-input" li-object:value="form.address2" maxlength="256" name="address[address2]" data-name="Address Address" placeholder="" type="text" id="Address-Address" required="" value="{{ form.address2 }}">
                             </div>
-                            <div id="w-node-c1cc0feb-3fc0-f42f-4d44-745bb7051efe-b7051ee4" class="form_field-wrapper">
-                              <div class="form_field-label">Zip</div><input class="form_input w-input" li-object:value="form.zip" maxlength="256" name="address[zip]" data-name="Address Zip" placeholder="" type="text" id="Address-Zip-4" required="" value="{{ form.zip }}">
-                            </div>
                             <div id="w-node-c1cc0feb-3fc0-f42f-4d44-745bb7051f02-b7051ee4" class="form_field-wrapper">
                               <div class="form_field-label">City</div><input class="form_input w-input" li-object:value="form.city" maxlength="256" name="address[city]" data-name="Address City" placeholder="" type="text" id="Address-City-4" required="" value="{{ form.city }}">
                             </div>
+                            <div id="w-node-c1cc0feb-3fc0-f42f-4d44-745bb7051efe-b7051ee4" class="form_field-wrapper">
+                              <div class="form_field-label">Postcode</div><input class="form_input w-input" li-object:value="form.zip" maxlength="256" name="address[zip]" data-name="Address Zip" placeholder="" type="text" id="Address-Zip-4" required="" value="{{ form.zip }}">
+                            </div>
                             <div id="w-node-c1cc0feb-3fc0-f42f-4d44-745bb7051f06-b7051ee4" class="form_field-wrapper">
-                              <div class="form_field-label">Country</div><select data-default="{{ form.country }}" class="form_input" name="address[country]"></select>
+                              <div class="form_field-label">Country</div><select data-default="{{ form.country }}" li-object="all_country_option_tags" class="form_input" name="address[country]">{{ all_country_option_tags }}</select>
                             </div>
                             <div id="w-node-c1cc0feb-3fc0-f42f-4d44-745bb7051f0e-b7051ee4" class="form_field-wrapper">
                               <div class="form_field-label">Phone Number</div><input class="form_input w-input" li-object:value="form.phone" maxlength="256" name="address[phone]" data-name="Address Phone 2" placeholder="" type="text" required="" value="{{ form.phone }}">
-                            </div>
-                            <div id="w-node-c1cc0feb-3fc0-f42f-4d44-745bb7051f12-b7051ee4" class="form_checkbox">
-                              <div li-object="form.set_as_default_checkbox" id="w-node-c1cc0feb-3fc0-f42f-4d44-745bb7051f13-b7051ee4" class="form_checkbox-icon">{{ form.set_as_default_checkbox }}</div>
-                              <div>Save as default</div>
-                            </div>
+                            </div><label id="w-node-b077c820-2243-c1eb-cd94-5642aeb13cb6-b7051ee4" class="w-checkbox form_checkbox"><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" li-object="form.set_as_default_checkbox" class="w-checkbox-input form_checkbox-icon_account"><span class="w-form-label" for="checkbox">Save as default</span></label>
                             <div id="w-node-_961bba70-aa94-6dfa-6bfc-0199ac19718b-b7051ee4" class="spacer-xxsmall"></div><input type="submit" data-wait="Please wait..." id="w-node-c1cc0feb-3fc0-f42f-4d44-745bb7051f16-b7051ee4" class="button w-button" value="Save">
                             <a aria-controls="modal-{{forloop.index}}" x-on:click="modal = 99" id="w-node-c1cc0feb-3fc0-f42f-4d44-745bb7051f17-b7051ee4" href="#" class="text-size-regular text-style-link">Cancel</a>
                           </div>
@@ -109,22 +105,18 @@
                           <div id="w-node-_431962bc-cbac-6ad1-3996-e9d2495180eb-495180d5" class="form_field-wrapper">
                             <div class="form_field-label">Address 2</div><input class="form_input w-input" maxlength="256" name="address[address2]" data-name="Address Address 2" placeholder="" type="text" id="Address-Address-4">
                           </div>
-                          <div id="w-node-_431962bc-cbac-6ad1-3996-e9d2495180ef-495180d5" class="form_field-wrapper">
-                            <div class="form_field-label">Zip</div><input class="form_input w-input" maxlength="256" name="address[zip]" data-name="Address Zip" placeholder="" type="text" id="Address-Zip-5">
-                          </div>
                           <div id="w-node-_431962bc-cbac-6ad1-3996-e9d2495180f3-495180d5" class="form_field-wrapper">
                             <div class="form_field-label">City</div><input class="form_input w-input" maxlength="256" name="address[city]" data-name="Address City" placeholder="" type="text" id="Address-City-5">
+                          </div>
+                          <div id="w-node-_431962bc-cbac-6ad1-3996-e9d2495180ef-495180d5" class="form_field-wrapper">
+                            <div class="form_field-label">Postcode</div><input class="form_input w-input" maxlength="256" name="address[zip]" data-name="Address Zip" placeholder="" type="text" id="Address-Zip-5">
                           </div>
                           <div id="w-node-_431962bc-cbac-6ad1-3996-e9d2495180f7-495180d5" class="form_field-wrapper">
                             <div class="form_field-label">Country</div><select li-object="all_country_option_tags" data-default="{{ form.country }}" class="form_input" name="address[country]">{{ all_country_option_tags }}</select>
                           </div>
                           <div id="w-node-_431962bc-cbac-6ad1-3996-e9d2495180ff-495180d5" class="form_field-wrapper">
                             <div class="form_field-label">Phone Number</div><input class="form_input w-input" maxlength="256" name="address[phone]" data-name="Address Phone" placeholder="" type="text" id="Address-Phone-2">
-                          </div>
-                          <div id="w-node-_431962bc-cbac-6ad1-3996-e9d249518103-495180d5" class="form_checkbox">
-                            <div li-object="form.set_as_default_checkbox" id="w-node-_431962bc-cbac-6ad1-3996-e9d249518104-495180d5" class="form_checkbox-icon">{{ form.set_as_default_checkbox }}</div>
-                            <div>Save as default</div>
-                          </div>
+                          </div><label id="w-node-_4b31fc63-2907-02ac-39ad-8eaf05686124-495180d5" class="w-checkbox form_checkbox"><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" li-object="form.set_as_default_checkbox" class="w-checkbox-input form_checkbox-icon_account"><span class="w-form-label" for="checkbox">Save as default</span></label>
                           <div id="w-node-_3fa53580-93b7-fc13-8aae-ef809529949a-495180d5" class="spacer-xxsmall"></div><input type="submit" data-wait="Please wait..." id="w-node-_431962bc-cbac-6ad1-3996-e9d249518107-495180d5" class="button w-button" value="Create">
                           <a aria-controls="modal-100" x-on:click="modal = 99" id="w-node-_431962bc-cbac-6ad1-3996-e9d249518108-495180d5" href="#" class="text-size-regular text-style-link">Cancel</a>
                         </div>

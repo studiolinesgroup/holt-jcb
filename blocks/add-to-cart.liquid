@@ -12,10 +12,12 @@
                         <div li-object="product.price | money" class="new-machine-grid_stat">{{ product.price | money }}</div>
                         <div class="new-machine-grid_stat-title">excl. VAT</div>
                       </div>
-                      <div class="product-card_price">
+                      {% if localization.country.iso_code == 'GB' %}    <div li-if="localization.country.iso_code == 'GB'" class="product-card_price">
+    
                         <div li-object="product.price | times:1.2 | money" class="new-machine-grid_stat_vat">{{ product.price | times:1.2 | money }}</div>
                         <div class="new-machine-grid_stat-title">Inc. VAT</div>
-                      </div>
+                          </div>
+{% endif %}
                     </div>
                     <div class="product-header_form-block w-form">
                       {% form 'product', product, class: 'product-header_default-state' %}

@@ -8,11 +8,6 @@
                     <div class="filter_heading">
 {{ section.settings.text_filter }}
 </div>
-                    <a li-object:href="collection.url" href="{{ collection.url }}" class="button is-link hide-tablet w-inline-block">
-                      <div>
-{{ section.settings.text_clear_all }}
-</div>
-                    </a>
                   </div>
                   <div class="filter_results-wrapper">
                     <div class="filter_results-text"><span li-object="collection.all_products_count | append: ' '">{{ collection.all_products_count | append: ' ' }}</span> <span>
@@ -55,8 +50,8 @@
               </form>
               <a data-w-id="678e0483-bbe4-e79a-1722-b169c587fede" href="#" class="filter_tablet-modal-close-button w-inline-block"><img src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/624380709031623afe4aee7e_icon_close-modal.svg" alt="" class="icon-1x1-small"></a>
             </div>
-            <a data-w-id="f6c1ed66-8f2c-cc0d-fa87-63d3fbb7d53f" href="#" class="filter_tablet-filters-button w-inline-block"><img alt="" loading="lazy" src="https://uploads-ssl.webflow.com/624380709031623bfe4aee60/62942b9f00484cf074e6f851_icon-filters.svg" class="button-icon-left">
-              <div>Filters</div>
+            <a id="w-node-f6c1ed66-8f2c-cc0d-fa87-63d3fbb7d53f-fbb7d53a" data-w-id="f6c1ed66-8f2c-cc0d-fa87-63d3fbb7d53f" href="#" class="filter_tablet-filters-button w-inline-block"><img alt="" loading="lazy" src="{{ 'search.svg' | asset_url }}" class="search-button-icon-left">
+              <div>Search</div>
             </a>
             <div id="w-node-f6c1ed66-8f2c-cc0d-fa87-63d3fbb7d543-fbb7d53a" class="filter_feed">
               <div class="filter_product-list-wrapper w-dyn-list">
@@ -178,13 +173,7 @@
             "id": "text_filter",
             "type": "text",
             "label": "Filter",
-            "default": "Filters"
-        },
-        {
-            "id": "text_clear_all",
-            "type": "text",
-            "label": "Clear all",
-            "default": "Clear all"
+            "default": "Search"
         },
         {
             "id": "text_products_shown",
