@@ -1,24 +1,37 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "collection_hero": {
-            "type": "collection_hero"
-        },
-        "collection_products": {
-            "type": "collection_products"
-        },
-        "grey_image_left": {
-            "type": "grey_image_left"
-        },
-        "white_image_right": {
-            "type": "white_image_right"
-        }
+  "sections": {
+    "collection_hero": {
+      "type": "collection_hero",
+      "settings": {}
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "collection_hero",
-        "collection_products",
-        "grey_image_left",
-        "white_image_right"
-    ]
+    "collection_products": {
+      "type": "collection_products",
+      "settings": {}
+    },
+    "grey_image_left": {
+      "type": "grey_image_left",
+      "settings": {}
+    },
+    "white_image_right": {
+      "type": "white_image_right",
+      "settings": {}
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "collection_hero",
+    "collection_products",
+    "grey_image_left",
+    "white_image_right"
+  ]
 }
