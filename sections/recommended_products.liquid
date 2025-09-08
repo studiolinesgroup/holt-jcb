@@ -1,6 +1,5 @@
-<div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=3&intent=related" class="padding-global padding-section-medium">
-          {% if recommendations.products_count > 0 %}    <div li-if="recommendations.products_count > 0">
-    
+<div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="padding-global padding-section-medium">
+          <div class="container-large">
             <div class="center-headline">
               <h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
@@ -18,29 +17,7 @@
 {% endfor %}
               </ul>
             </div>
-            <div class="hide w-embed w-script">
-              <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const productRecommendationsSection = document.querySelector('.product-recommendations');
-    const url = productRecommendationsSection.dataset.url;
-    fetch(url)
-      .then(response => response.text())
-      .then(text => {
-      const html = document.createElement('div');
-      html.innerHTML = text;
-      const recommendations = html.querySelector('.product-recommendations');
-      if (recommendations && recommendations.innerHTML.trim().length) {
-        productRecommendationsSection.innerHTML = recommendations.innerHTML;
-      }
-    })
-      .catch(e => {
-      console.error(e);
-    });
-  });
-</script>
-            </div>
-              </div>
-{% endif %}
+          </div>
         </div> {% schema %} {
     "tag": "section",
     "name": "Recommended Products",

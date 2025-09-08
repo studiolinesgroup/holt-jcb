@@ -4982,6 +4982,88 @@ figcaption {
   margin-bottom: 1.5rem;
 }
 
+.heading-style-h2-2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.button-2 {
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #000;
+  border: 1px solid #000;
+  padding: .65rem 1.5rem;
+  font-weight: 400;
+}
+
+.button-2.is-secondary {
+  color: #000;
+  background-color: #0000;
+  border: 1px solid #000;
+}
+
+.product-item_image-2 {
+  object-fit: contain;
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.section_product-recommended-2 {
+  border-top: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.product_list-2 {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  place-items: stretch stretch;
+  display: grid;
+}
+
+.padding-global-2 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.product-item_tag-2 {
+  color: #fff;
+  background-color: #000;
+  padding: .3rem .5rem;
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+.product-item_tag-2.is-red {
+  color: #9b1313;
+  background-color: #f8e4e4;
+}
+
+.heading-style-h4-2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.heading-style-h4-2.text-weight-normal {
+  font-weight: 400;
+}
+
+.headline-wrapper-2 {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  display: flex;
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 4.35rem;
@@ -5852,6 +5934,11 @@ figcaption {
     width: 1.25rem;
     height: 1.25rem;
   }
+
+  .product_list-2 {
+    grid-column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -6457,6 +6544,25 @@ figcaption {
   .cart_grid_long.is-header, .cart_grid_long.is-header.hide-mobil, .cart_grid_long.is-header_small.hide-mobil {
     display: none;
   }
+
+  .heading-style-h2-2 {
+    font-size: 2rem;
+  }
+
+  .product_list-2 {
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .padding-global-2 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .heading-style-h4-2 {
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -7034,6 +7140,18 @@ figcaption {
 
   .cart_grid_long {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .heading-style-h2-2 {
+    font-size: 2rem;
+  }
+
+  .heading-style-h4-2 {
+    font-size: 1.25rem;
+  }
+
+  .heading-style-h4-2.text-weight-normal {
+    font-size: 1.15rem;
   }
 }
 
