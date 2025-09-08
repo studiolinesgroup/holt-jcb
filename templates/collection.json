@@ -1,0 +1,24 @@
+{
+    "sections": {
+        "collection_hero": {
+            "type": "collection_hero"
+        },
+        "collection_products": {
+            "type": "collection_products"
+        },
+        "grey_image_left": {
+            "type": "grey_image_left"
+        },
+        "white_image_right": {
+            "type": "white_image_right"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "collection_hero",
+        "collection_products",
+        "grey_image_left",
+        "white_image_right"
+    ]
+}
