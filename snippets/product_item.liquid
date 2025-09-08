@@ -32,6 +32,8 @@
                         <a href="#" li-element="add-to-cart" class="button fill w-button" @click="addToCart($event, true)" :disabled="!addToCartButton">Add to cart</a>
                           </div>
 {% endif %}
-                      <a href="{{ product.url }}" li-object:href="product.url" class="button is-alternate fill w-button">Read more</a>
+                      <div class="button-fill">
+                        <a href="{{ product.url }}" li-object:href="product.url" class="button is-alternate fill w-button">Read more</a>
+                      </div>
                     </div>
                   </div>
