@@ -19,6 +19,8 @@
     }
   },
   "platform_customizations": {
-    "custom_css": []
+    "custom_css": [
+      ".jdgm-widget {max-width: 100% !important; padding-left: 5% !important; padding-right: 5% !important;}"
+    ]
   }
 }
