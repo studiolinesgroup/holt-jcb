@@ -51,16 +51,6 @@
         "text_heading": "Customer Favourites"
       }
     },
-    "white_image_right": {
-      "type": "white_image_right",
-      "settings": {
-        "text_headline": "Short Heading Goes Here",
-        "richtext_lead_paragraph": "<p>Lead paragraph goes here</p>",
-        "richtext_text": "<p>Body copy goes here</p>",
-        "url_button_url": "",
-        "text_button_text": "Button Text"
-      }
-    },
     "175734766837ab685f": {
       "type": "apps",
       "blocks": {
@@ -83,7 +73,6 @@
   "order": [
     "product_hero",
     "recommended_products",
-    "white_image_right",
     "175734766837ab685f"
   ]
 }
