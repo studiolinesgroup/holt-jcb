@@ -1,17 +1,15 @@
-<div li-block="Product Name">
+<div li-block="Vendor">
                     
                     
-                    <h1 li-object:text="product.title" class="heading-style-h2">
-{{ product.title }}
-</h1>
+                    <div li-object="product.vendor" class="text-size-regular">{{ product.vendor }}</div>
                     
                   
                 </div> {% schema %} {
-    "name": "Product Name",
+    "name": "Vendor",
     "settings": [],
     "presets": [
         {
-            "name": "Product Name"
+            "name": "Vendor"
         }
     ]
 } {% endschema %}

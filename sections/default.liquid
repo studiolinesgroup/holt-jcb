@@ -1,9 +1,13 @@
 <div class="padding-global padding-section-medium">
-          <div class="max-width-large">
-            <div li-object="page.content" class="text-rich-text w-richtext">{{ page.content }}</div>
+          <div class="container-large">
+            <div class="default_wrapper">
+              <div class="padding-bottom padding-medium">
+                <h1 li-object="page.title" class="heading-style-h1">{{ page.title }}</h1>
+              </div>
+              <div li-object="page.content" class="text-rich-text w-richtext">{{ page.content }}</div>
+            </div>
           </div>
-        </div>
-        <div class="spacer-large"></div> {% schema %} {
+        </div> {% schema %} {
     "tag": "section",
     "name": "Default",
     "class": "section_default",

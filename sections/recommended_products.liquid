@@ -1,7 +1,6 @@
-<div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=3&intent=related" class="padding-global padding-section-medium">
-          {% if recommendations.products_count > 0 %}    <div li-if="recommendations.products_count > 0">
-    
-            <div class="center-headline">
+<div data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related" class="padding-global padding-section-medium product-recommendations">
+          <div class="container-large">
+            <div class="headline-wrapper">
               <h2 class="heading-style-h2">
 {{ section.settings.text_heading }}
 </h2>
@@ -18,8 +17,10 @@
 {% endfor %}
               </ul>
             </div>
-            <div class="hide w-embed w-script">
-              <script>
+          </div>
+        </div>
+        <div class="hide w-embed w-script">
+          <script>
   document.addEventListener('DOMContentLoaded', function() {
     const productRecommendationsSection = document.querySelector('.product-recommendations');
     const url = productRecommendationsSection.dataset.url;
@@ -38,9 +39,6 @@
     });
   });
 </script>
-            </div>
-              </div>
-{% endif %}
         </div> {% schema %} {
     "tag": "section",
     "name": "Recommended Products",
@@ -50,7 +48,7 @@
             "id": "text_heading",
             "type": "text",
             "label": "Heading",
-            "default": "Customer Favourites"
+            "default": "Recommended"
         }
     ],
     "presets": [

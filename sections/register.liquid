@@ -14,16 +14,16 @@
                   <div class="form_field-wrapper"><label for="field-5" class="form_hidden-label">First Name</label><input class="form_input w-input" maxlength="256" name="customer[first_name]" data-name="Field 5" placeholder="First Name" type="text" id="field-5" required=""></div>
                   <div class="form_field-wrapper"><label for="field-5" class="form_hidden-label">Last Name</label><input class="form_input w-input" maxlength="256" name="customer[last_name]" data-name="Field 5" placeholder="Last Name" type="text" id="field-5" required=""></div>
                   <div class="form_field-wrapper"><label for="field-5" class="form_hidden-label">Email Address</label><input class="form_input w-input" maxlength="256" name="customer[email]" data-name="Field 5" placeholder="Email Address" type="email" id="field-5" required=""></div>
-                  <div class="form_field-wrapper"><label for="field-5" class="form_hidden-label">Password</label><input class="form_input w-input" maxlength="256" name="customer[password]" data-name="Field 5" placeholder="Password" type="password" id="field-5" required=""></div><label class="w-checkbox form_checkbox"><input type="checkbox" name="" data-name="" required="" class="w-checkbox-input form_checkbox-icon_account"><span class="form_checkbox-label w-form-label">
+                  <div class="form_field-wrapper"><label for="field-5" class="form_hidden-label">Password</label><input class="form_input w-input" maxlength="256" name="customer[password]" data-name="Field 5" placeholder="Password" type="password" id="field-5" required=""></div><label class="w-checkbox form_checkbox"><input type="checkbox" name="" data-name="" required="" class="w-checkbox-input form_checkbox-icon"><span class="form_checkbox-label w-form-label">
 {{ section.settings.text_checkbox_legal }}
-</span></label><label class="w-checkbox form_checkbox"><input type="checkbox" name="customer[accepts_marketing]" data-name="" class="w-checkbox-input form_checkbox-icon_account"><span class="form_checkbox-label w-form-label">
+</span></label><label class="w-checkbox form_checkbox"><input type="checkbox" name="customer[accepts_marketing]" data-name="" class="w-checkbox-input form_checkbox-icon"><span class="form_checkbox-label w-form-label">
 {{ section.settings.text_checkbox_marketing }}
 </span></label><input type="submit" data-wait="Please wait" id="w-node-_020413c5-8dec-2c46-93a1-274ba44a60ab-a44a6088" class="button max-width-full w-button" value="Register now">
                 {% endform %}
-                <div class="text-align-center"><span>
+                <div class="text-size-regular text-align-center"><span>
 {{ section.settings.text_already_have_an_account }}
 </span>
-                  <a href="{{ routes.account_login_url }}" li-object:href="routes.account_login_url" class="text-style-link text-weight-semibold">Login now</a>
+                  <a href="{{ routes.account_login_url }}" li-object:href="routes.account_login_url" class="text-style-link text-weight-bold">Login now</a>
                 </div>
                 <div class="hide w-form-done">
                   <div>Thank you! Your submission has been received!</div>
@@ -34,13 +34,11 @@
               </div>
             </div>
           </div>
-        </div>
-        <div id="w-node-_020413c5-8dec-2c46-93a1-274ba44a60b6-a44a6088" class="login_image-wrapper">
-          <div class="image_overlay"></div>{% if section.settings.image_image %}
-{{ section.settings.image_image | image_url: width: 800 | image_tag: loading: 'lazy', id: 'w-node-_020413c5-8dec-2c46-93a1-274ba44a60b7-a44a6088', class: 'login_image' }}
+          <div id="w-node-_020413c5-8dec-2c46-93a1-274ba44a60b6-a44a6088" class="login_image-wrapper">{% if section.settings.image_bild %}
+{{ section.settings.image_bild | image_url: width: 800 | image_tag: loading: 'lazy', id: 'w-node-_020413c5-8dec-2c46-93a1-274ba44a60b7-a44a6088', class: 'login_image' }}
 {% else %}
 <img src="{{ 'hero-apparel-1.svg' | asset_url }}" loading="lazy" id="w-node-_020413c5-8dec-2c46-93a1-274ba44a60b7-a44a6088" alt="" class="login_image">
-{% endif %}
+{% endif %}</div>
         </div> {% schema %} {
     "tag": "section",
     "name": "Register",
@@ -71,9 +69,9 @@
             "default": "Already have an Account?"
         },
         {
-            "id": "image_image",
+            "id": "image_bild",
             "type": "image_picker",
-            "label": "Image"
+            "label": "Bild"
         }
     ],
     "presets": [
