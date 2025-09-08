@@ -1,6 +1,6 @@
 <div class="login_component">
           <div id="w-node-_020413c5-8dec-2c46-93a1-274ba44a608a-a44a6088" class="login_left">
-            <div id="w-node-_020413c5-8dec-2c46-93a1-274ba44a608b-a44a6088" class="login_tabs">
+            <div id="w-node-_020413c5-8dec-2c46-93a1-274ba44a608b-a44a6088" class="login_tabs shadow-large">
               <div class="login_form w-form">
                 <h1 class="heading-style-h2 text-align-center">
 {{ section.settings.text_create_account }}
@@ -34,13 +34,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div id="w-node-_020413c5-8dec-2c46-93a1-274ba44a60b6-a44a6088" class="login_image-wrapper">
-          <div class="image_overlay"></div>{% if section.settings.image_image %}
-{{ section.settings.image_image | image_url: width: 800 | image_tag: loading: 'lazy', id: 'w-node-_020413c5-8dec-2c46-93a1-274ba44a60b7-a44a6088', class: 'login_image' }}
-{% else %}
-<img src="{{ 'hero-apparel-1.svg' | asset_url }}" loading="lazy" id="w-node-_020413c5-8dec-2c46-93a1-274ba44a60b7-a44a6088" alt="" class="login_image">
-{% endif %}
         </div> {% schema %} {
     "tag": "section",
     "name": "Register",
@@ -69,11 +62,6 @@
             "type": "text",
             "label": "Already have an Account",
             "default": "Already have an Account?"
-        },
-        {
-            "id": "image_image",
-            "type": "image_picker",
-            "label": "Image"
         }
     ],
     "presets": [

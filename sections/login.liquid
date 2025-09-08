@@ -1,6 +1,6 @@
 <div class="login_component">
           <div id="w-node-_175fd21a-17bf-bcb4-c19e-9a679b16ea24-9b16ea22" class="login_left">
-            <div data-duration-in="300" data-duration-out="100" id="w-node-_175fd21a-17bf-bcb4-c19e-9a679b16ea25-9b16ea22" data-current="Tab 1" data-easing="ease" class="login_tabs w-tabs">
+            <div data-duration-in="300" data-duration-out="100" id="w-node-_175fd21a-17bf-bcb4-c19e-9a679b16ea25-9b16ea22" data-current="Tab 1" data-easing="ease" class="login_tabs shadow-large w-tabs">
               <div class="login_tab-content w-tab-content">
                 <div data-w-tab="Tab 1" class="login_tab-pane w-tab-pane w--tab-active">
                   <div class="login_form w-form">
@@ -61,13 +61,6 @@
               </div>
             </div>
           </div>
-          <div id="w-node-_175fd21a-17bf-bcb4-c19e-9a679b16ea5d-9b16ea22" class="login_image-wrapper">
-            <div class="image_overlay"></div>{% if section.settings.image_bild %}
-{{ section.settings.image_bild | image_url: width: 800 | image_tag: loading: 'lazy', id: 'w-node-_175fd21a-17bf-bcb4-c19e-9a679b16ea5e-9b16ea22', class: 'login_image' }}
-{% else %}
-<img src="{{ 'hero-apparel-1.svg' | asset_url }}" loading="lazy" id="w-node-_175fd21a-17bf-bcb4-c19e-9a679b16ea5e-9b16ea22" alt="" class="login_image">
-{% endif %}
-          </div>
         </div> {% schema %} {
     "tag": "section",
     "name": "Login",
@@ -102,11 +95,6 @@
             "type": "text",
             "label": "Forgot password",
             "default": "Forgot password?"
-        },
-        {
-            "id": "image_bild",
-            "type": "image_picker",
-            "label": "Bild"
         }
     ],
     "presets": [
