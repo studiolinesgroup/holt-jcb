@@ -21,7 +21,7 @@
   "platform_customizations": {
     "custom_css": [
       ".jdgm-widget {max-width: 100% !important; padding-left: 5% !important; padding-right: 5% !important;}",
-      ".jdgm-rev-widg__title {font-size: inherit !important;}"
+      ".jdgm-rev-widg__title {font-size: 1.75rem !important;}"
     ]
   }
 }
