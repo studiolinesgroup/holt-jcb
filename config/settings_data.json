@@ -15,7 +15,7 @@
     "custom_css": [
       ".shopify-policy__container {max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; padding-left: 5% !important; padding-right: 5% !important;}",
       ".shopify-policy__body {max-width: 48rem !important; margin-bottom: 4rem !important;}",
-      ".shopify-policy__title {margin-top: 5rem !important; margin-bottom: 3rem !important;}"
+      ".shopify-policy__title {margin-top: 5rem !important; margin-bottom: 3rem !important; text-align: left !important;}"
     ]
   }
 }
