@@ -31,14 +31,15 @@
         "text_button_text": "Button Text"
       }
     },
-    "white_image_right": {
+    "white_image_right_cKar97": {
       "type": "white_image_right",
       "settings": {
-        "text_headline": "Short Heading Goes Here",
-        "richtext_lead_paragraph": "<p>Lead paragraph goes here</p>",
-        "richtext_text": "<p>Body copy goes here</p>",
-        "url_button_url": "",
-        "text_button_text": "Button Text"
+        "text_headline": "Why Holt JCB for your parts?",
+        "richtext_lead_paragraph": "<p>As the appointed JCB Dealer for the South West and South Wales, we’ve been working hard with the JCB Global Parts Team to realign pricing for as many Genuine JCB Parts as possible. We're proud to have such a strong relationship with the central JCB team, with our dedication to lowering costs of ownership being a significant and influential factor in recent pricing realignment.</p>",
+        "richtext_text": "<p>Your local Holt JCB Depot is home to an experienced team of JCB parts experts. Having been trained at the JCB Headquarters Factory, their knowledge of JCB machines and parts is second to none. ‍Our parts experts take genuine pride in ensuring you receive the correct JCB part(s) quickly, and can advise you on which JCB components are suitable for machines from other manufacturers.  </p><p></p><p>If the part you need isn’t listed on the online store, we can still help. Speak to your local Holt JCB parts expert and they’ll be able to source exactly what you need.</p>",
+        "url_button_url": "https://www.holtjcb.co.uk/contact/parts-attachments-service-contact",
+        "text_button_text": "Speak to our team",
+        "image_image": "shopify://shop_images/bd6b2e14bcd2a91455029e493cffb027bbb73746_1.png"
       }
     }
   },
@@ -48,6 +49,6 @@
     "collection_hero",
     "collection_products",
     "grey_image_left_G4xzmU",
-    "white_image_right"
+    "white_image_right_cKar97"
   ]
 }
