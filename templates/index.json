@@ -12,8 +12,8 @@
     "image_with_text": {
       "type": "image_with_text",
       "settings": {
-        "text_heading": "Short heading here",
-        "richtext_paragraph": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>"
+        "text_heading": "Holt JCB Parts Store",
+        "richtext_paragraph": "<p>As the JCB Dealer for South West England and South Wales we work hard to deliver the best value in Genuine JCB Parts. Our online parts store includes over 2,750 of the most commonly purchased parts, available for UK mainland delivery. If you can't find the part you need contact our dedicated parts team who will be able to supply it to you.</p>"
       }
     },
     "list_collection": {
