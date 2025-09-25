@@ -1,1 +1,28 @@
-{"type":"footer","name":"Footer Group","sections":{"footer":{"type":"footer","settings":{}}},"order":["footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "text_text": "First established in 1979, Holt JCB is appointed JCB Dealer for South West England and South Wales. Call our team of JCB experts for advice on JCB parts, machines, service, maintenance or finance solutions.",
+        "url_button_url": "https://www.holtjcb.co.uk/contact/parts-attachments-service-contact",
+        "text_button_text": "Speak to our team",
+        "placeholder_text": "Email address",
+        "footer_menu": "footer"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
