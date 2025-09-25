@@ -70,6 +70,13 @@
               <div>Filters</div>
             </a>
             <div id="w-node-_63614b06-d13c-4caa-b5ce-a7c7ab35668a-ab35667c" class="filter_feed">
+              <div class="filter_feed-header"><select id="sort-by" li-for:inside="option in collection.sort_options" class="sort_select filter_checkbox">
+        {% for option in collection.sort_options %}                            
+                  
+                            <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% elsif option.value == collection.default_sort_by %}selected{% endif %}>{{ option.name }}</option>
+                            
+                
+                    {% endfor %}    </select></div>
               <div class="filter_product-list-wrapper w-dyn-list">
                 <div role="list" class="filter_product-list w-dyn-items">
                   {% for product in search.results %}    <div li-for="product in search.results" role="listitem" class="filter_product-list-item w-dyn-item">
