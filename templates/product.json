@@ -1,49 +1,80 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "product_hero": {
-            "type": "product_hero",
-            "blocks": {
-                "product-name": {
-                    "type": "product-name",
-                    "name": "Product Name"
-                },
-                "product-information": {
-                    "type": "product-information",
-                    "name": "Product Information"
-                },
-                "add-to-cart": {
-                    "type": "add-to-cart",
-                    "name": "Add to Cart"
-                },
-                "description": {
-                    "type": "description",
-                    "name": "Description"
-                },
-                "warranty": {
-                    "type": "warranty",
-                    "name": "Warranty"
-                }
-            },
-            "block_order": [
-                "product-name",
-                "product-information",
-                "add-to-cart",
-                "description",
-                "warranty"
-            ]
+  "sections": {
+    "product_hero": {
+      "type": "product_hero",
+      "blocks": {
+        "product-name": {
+          "type": "product-name",
+          "name": "Product Name",
+          "settings": {},
+          "blocks": {}
         },
-        "recommended_products": {
-            "type": "recommended_products"
+        "product-information": {
+          "type": "product-information",
+          "name": "Product Information",
+          "settings": {},
+          "blocks": {}
         },
-        "white_image_right": {
-            "type": "white_image_right"
+        "add-to-cart": {
+          "type": "add-to-cart",
+          "name": "Add to Cart",
+          "settings": {},
+          "blocks": {}
+        },
+        "description": {
+          "type": "description",
+          "name": "Description",
+          "settings": {},
+          "blocks": {}
+        },
+        "warranty": {
+          "type": "warranty",
+          "name": "Warranty",
+          "settings": {},
+          "blocks": {}
         }
+      },
+      "block_order": [
+        "product-name",
+        "product-information",
+        "add-to-cart",
+        "description",
+        "warranty"
+      ],
+      "settings": {}
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "product_hero",
-        "recommended_products",
-        "white_image_right"
-    ]
+    "recommended_products": {
+      "type": "recommended_products",
+      "settings": {
+        "text_heading": "Customer Favourites"
+      }
+    },
+    "grey_image_left_wgdk67": {
+      "type": "grey_image_left",
+      "settings": {
+        "image_image": "shopify://shop_images/686da7c49d832b976eee481e4f5acebbd749b577_1.png",
+        "text_headline": "WHY GENUINE JCB PARTS?",
+        "richtext_lead_paragraph": "<p>Genuine JCB Parts are designed to work in perfect harmony with your machine for optimum performance and productivity:</p>",
+        "richtext_text": "<p>• Comply with machine warranty requirements<br/>• Optimise the efficiency of your machine<br/>• Reduce wear and tear, and machine downtime<br/>• Maximise the life-time of your machine<br/>• Protect the resale value of your machine</p><p></p><p>And remember, all Genuine JCB Parts come with a 6 month warranty as standard, extended to 12 month unlimited hour warranty when fitted by Holt JCB.</p>",
+        "url_button_url": "",
+        "text_button_text": "Button Text"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "product_hero",
+    "recommended_products",
+    "grey_image_left_wgdk67"
+  ]
 }
