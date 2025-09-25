@@ -1,24 +1,54 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "image_with_text": {
-            "type": "image_with_text"
-        },
-        "list_collection": {
-            "type": "list_collection"
-        },
-        "grey_image_left": {
-            "type": "grey_image_left"
-        },
-        "white_image_right": {
-            "type": "white_image_right"
-        }
+  "sections": {
+    "image_with_text": {
+      "type": "image_with_text",
+      "settings": {
+        "text_heading": "Short heading here",
+        "richtext_paragraph": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>"
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "image_with_text",
-        "list_collection",
-        "grey_image_left",
-        "white_image_right"
-    ]
+    "list_collection": {
+      "type": "list_collection",
+      "settings": {}
+    },
+    "grey_image_left": {
+      "type": "grey_image_left",
+      "settings": {
+        "image_image": "shopify://shop_images/686da7c49d832b976eee481e4f5acebbd749b577_1.png",
+        "text_headline": "WHY GENUINE JCB PARTS?",
+        "richtext_lead_paragraph": "<p>Genuine JCB Parts are designed to work in perfect harmony with your machine for optimum performance and productivity:</p>",
+        "richtext_text": "<p>• Comply with machine warranty requirements<br/>• Optimise the efficiency of your machine<br/>• Reduce wear and tear, and machine downtime<br/>• Maximise the life-time of your machine<br/>• Protect the resale value of your machine</p><p></p><p>And remember, all Genuine JCB Parts come with a 6 month warranty as standard, extended to 12 month unlimited hour warranty when fitted by Holt JCB.</p>",
+        "url_button_url": "",
+        "text_button_text": "Button Text"
+      }
+    },
+    "white_image_right": {
+      "type": "white_image_right",
+      "settings": {
+        "text_headline": "Why Holt JCB for your parts?",
+        "richtext_lead_paragraph": "<p>As the appointed JCB Dealer for the South West and South Wales, we’ve been working hard with the JCB Global Parts Team to realign pricing for as many Genuine JCB Parts as possible. We're proud to have such a strong relationship with the central JCB team, with our dedication to lowering costs of ownership being a significant and influential factor in recent pricing realignment.</p>",
+        "richtext_text": "<p>Your local Holt JCB Depot is home to an experienced team of JCB parts experts. Having been trained at the JCB Headquarters Factory, their knowledge of JCB machines and parts is second to none. ‍Our parts experts take genuine pride in ensuring you receive the correct JCB part(s) quickly, and can advise you on which JCB components are suitable for machines from other manufacturers.  </p><p></p><p>If the part you need isn’t listed on the online store, we can still help. Speak to your local Holt JCB parts expert and they’ll be able to source exactly what you need.</p>",
+        "url_button_url": "https://www.holtjcb.co.uk/contact/parts-attachments-service-contact",
+        "text_button_text": "Speak to our team",
+        "image_image": "shopify://shop_images/bd6b2e14bcd2a91455029e493cffb027bbb73746_1.png"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "image_with_text",
+    "list_collection",
+    "grey_image_left",
+    "white_image_right"
+  ]
 }
