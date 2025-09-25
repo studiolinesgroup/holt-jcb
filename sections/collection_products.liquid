@@ -54,6 +54,13 @@
               <div>Search</div>
             </a>
             <div id="w-node-f6c1ed66-8f2c-cc0d-fa87-63d3fbb7d543-fbb7d53a" class="filter_feed">
+              <div class="filter_feed-header"><select id="sort-by" li-for:inside="option in collection.sort_options" class="sort_select filter_checkbox">
+        {% for option in collection.sort_options %}                            
+                  
+                            <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% elsif option.value == collection.default_sort_by %}selected{% endif %}>{{ option.name }}</option>
+                            
+                
+                    {% endfor %}    </select></div>
               <div class="filter_product-list-wrapper w-dyn-list">
                 <div role="list" class="filter_product-list w-dyn-items">
                   {% for product in collection.products %}    <div li-for="product in collection.products" role="listitem" class="filter_product-list-item w-dyn-item">
