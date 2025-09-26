@@ -4,7 +4,7 @@
               <div class="image_wrapper">{% if section.settings.image_image %}
 {{ section.settings.image_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'contain_image' }}
 {% else %}
-<img loading="lazy" alt="" src="{{ 'image.svg' | asset_url }}" width="auto" height="auto" class="contain_image">
+<img loading="lazy" alt="" src="{{ 'image.svg' | asset_url }}" class="contain_image">
 {% endif %}</div>
               <div id="w-node-b4eecca6-b7fe-f9fe-79a3-24d1820f7efe-820f7ef8" class="layout_content">
                 <div class="content_wrapper">
@@ -18,6 +18,10 @@
                   <div class="content_secondary">
                     <div class="spacer-small"></div>
                     <div> {{ section.settings.richtext_text }} </div>
+                    <div class="spacer-large"></div>
+                    <div class="button-group">
+                      <a href="{{ section.settings.url_button_url }}" class="button w-button"> {{ section.settings.text_button_text }} </a>
+                    </div>
                   </div>
                 </div>
               </div>
