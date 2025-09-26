@@ -12,13 +12,24 @@
               </div>
             </div>
             <div class="page-header_background-wrapper">
-              <div class="overlay-layer_page-header"></div>
+              <div class="overlay-layer_page-header"></div>{% if section.settings.image_image %}
+{{ section.settings.image_image | image_url: width: 1000 | image_tag: class: 'image', sizes: '(max-width: 1200px) 100vw, 1200px', data-w-id: '334dc999-6a1b-8320-8d65-6c6d350caac4', loading: 'eager' }}
+{% else %}
+ {{ 'detailed-apparel-1' | placeholder_svg_tag: 'image' }} 
+{% endif %}
             </div>
           </div>
         </div> {% schema %} {
     "tag": "section",
     "name": "Collection Hero",
     "class": "section_small-hero",
+    "settings": [
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        }
+    ],
     "presets": [
         {
             "name": "Collection Hero",
