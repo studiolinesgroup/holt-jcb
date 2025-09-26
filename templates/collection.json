@@ -11,7 +11,9 @@
   "sections": {
     "collection_hero": {
       "type": "collection_hero",
-      "settings": {}
+      "settings": {
+        "image_image": "shopify://shop_images/homevideo_1_1.png"
+      }
     },
     "collection_products": {
       "type": "collection_products",
