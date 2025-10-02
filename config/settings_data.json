@@ -9,6 +9,17 @@
  */
 {
   "current": {
+    "sections": {
+      "register": {
+        "type": "register",
+        "settings": {
+          "text_create_account": "Create Account",
+          "text_checkbox_legal": "I consent to my details being used in accordance with the Privacy Policy",
+          "text_checkbox_marketing": "Checkbox Marketing",
+          "text_already_have_an_account": "Already have an Account?"
+        }
+      }
+    },
     "content_for_index": [],
     "blocks": {
       "14060646107696862457": {
