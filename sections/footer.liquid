@@ -55,15 +55,17 @@
                 <div class="footer_bottom-wrapper">
                   <div class="footer_credit-text">© 2025 Holt JCB. All rights reserved. Designed and built by <a href="https://linesgroup.co.uk" target="_blank" class="footer_link">Lines.</a>
                   
-                </div>
-                  {% for link in linklists[section.settings.footer_menu].links %}    
-                    <div li-for="link in linklists[section.settings.footer_menu].links" class="footer_legal-links">   
+                  </div>
+                    <div class="footer_legal-links">
+                      {% for link in linklists[section.settings.footer_menu].links %}    
+                        <div li-for="link in linklists[section.settings.footer_menu].links" class="footer_legal-links">   
                     
                             <a li-object="link.title" li-object:href="link.url" href="{{ link.url }}" class="footer_legal-link">{{ link.title }}</a>   
                   
+                        </div>
+                      {% endfor %}
                     </div>
-{% endfor %}
-                </div>
+                  </div>
               </div>
             </div>
           </div>
